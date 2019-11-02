@@ -19,6 +19,7 @@
 		45798D06389DC6B4B46003E8 /* Pods_Snacktacular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4BF058CFCB18E050322091 /* Pods_Snacktacular.framework */; };
 		9F8AB35E236E072800D7B0A4 /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB35D236E072800D7B0A4 /* Spot.swift */; };
 		9F8AB360236E082E00D7B0A4 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB35F236E082E00D7B0A4 /* Spots.swift */; };
+		9F8AB362236E1B7300D7B0A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F8AB361236E1B7300D7B0A4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8C4BF058CFCB18E050322091 /* Pods_Snacktacular.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snacktacular.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8AB35D236E072800D7B0A4 /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		9F8AB35F236E082E00D7B0A4 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
+		9F8AB361236E1B7300D7B0A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				3E8390E6206597F600512DEA /* Assets.xcassets */,
 				3E8390E8206597F600512DEA /* LaunchScreen.storyboard */,
 				3E8390EB206597F600512DEA /* Info.plist */,
+				9F8AB361236E1B7300D7B0A4 /* GoogleService-Info.plist */,
 			);
 			path = Snacktacular;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E8390EA206597F600512DEA /* LaunchScreen.storyboard in Resources */,
+				9F8AB362236E1B7300D7B0A4 /* GoogleService-Info.plist in Resources */,
 				3E8390E7206597F600512DEA /* Assets.xcassets in Resources */,
 				3E8390E5206597F600512DEA /* Main.storyboard in Resources */,
 			);
@@ -428,10 +432,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9937BJYLPH;
+				DEVELOPMENT_TEAM = RM2YUT3ZSU;
 				INFOPLIST_FILE = Snacktacular/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gallaugher.Snacktacular;
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.Snacktacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -444,10 +448,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9937BJYLPH;
+				DEVELOPMENT_TEAM = RM2YUT3ZSU;
 				INFOPLIST_FILE = Snacktacular/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gallaugher.Snacktacular;
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.Snacktacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

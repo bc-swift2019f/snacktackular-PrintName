@@ -106,7 +106,11 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="1A4-7d-Reh">
-                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="0Xl-Y6-OJl"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="0Xl-Y6-OJl">
+                            <connections>
+                                <action selector="signOutPressed:" destination="BYZ-38-t0r" id="lda-fe-bDD"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="h6L-yW-eBN">
                             <connections>
                                 <segue destination="bJy-tV-PMh" kind="presentation" identifier="AddSpot" id="Pko-9g-ZUS"/>
