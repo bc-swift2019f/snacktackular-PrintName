@@ -21,6 +21,7 @@
 		9F8AB360236E082E00D7B0A4 /* Spots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB35F236E082E00D7B0A4 /* Spots.swift */; };
 		9F8AB362236E1B7300D7B0A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F8AB361236E1B7300D7B0A4 /* GoogleService-Info.plist */; };
 		9F8AB364237781BA00D7B0A4 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB363237781BA00D7B0A4 /* Double+roundTo.swift */; };
+		9F8AB3662377847500D7B0A4 /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB3652377847500D7B0A4 /* UIView+addBorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9F8AB35F236E082E00D7B0A4 /* Spots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spots.swift; sourceTree = "<group>"; };
 		9F8AB361236E1B7300D7B0A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9F8AB363237781BA00D7B0A4 /* Double+roundTo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+roundTo.swift"; sourceTree = "<group>"; };
+		9F8AB3652377847500D7B0A4 /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				3E0F960D2065AB6400AE450D /* SpotReviewsTableViewCell.swift */,
 				3E0F960F2065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift */,
 				9F8AB363237781BA00D7B0A4 /* Double+roundTo.swift */,
+				9F8AB3652377847500D7B0A4 /* UIView+addBorder.swift */,
 				3E8390E3206597F600512DEA /* Main.storyboard */,
 				3E8390E6206597F600512DEA /* Assets.xcassets */,
 				3E8390E8206597F600512DEA /* LaunchScreen.storyboard */,
@@ -293,6 +296,7 @@
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,
 				3E0F960E2065AB6400AE450D /* SpotReviewsTableViewCell.swift in Sources */,
+				9F8AB3662377847500D7B0A4 /* UIView+addBorder.swift in Sources */,
 				3E0F960A20659D9000AE450D /* SpotsTableViewCell.swift in Sources */,
 				9F8AB35E236E072800D7B0A4 /* Spot.swift in Sources */,
 				3E8390E0206597F600512DEA /* AppDelegate.swift in Sources */,

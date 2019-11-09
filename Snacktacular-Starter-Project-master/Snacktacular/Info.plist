@@ -56,5 +56,7 @@
 	<string>Snacktacular needs access to the device location in order to show this on a map.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Snacktacular needs access to the device location in order to show this on a map.</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
