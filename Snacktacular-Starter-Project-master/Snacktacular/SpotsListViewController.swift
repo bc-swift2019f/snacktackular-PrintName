@@ -16,8 +16,11 @@ class SpotsListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
+    
     var spots: Spots!
     var authUI: FUIAuth!
+    var locationManager: CLLocationManager!
+    var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,7 @@ class SpotsListViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        getLocation()
         spots.loadData {
             self.tableView.reloadData()
         }
@@ -57,6 +61,13 @@ class SpotsListViewController: UIViewController {
         }
     }
     
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(alertAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowSpot" {
             let destination = segue.destination as! SpotDetailViewController
@@ -74,12 +85,13 @@ class SpotsListViewController: UIViewController {
         case 0:
             spots.spotArray.sort(by: {$0.name < $1.name})
         case 1:
-            print("TODO")
+            spots.spotArray.sort(by: {$0.location.distance(from: currentLocation) < $1.location.distance(from: currentLocation)})
         case 2:
             print("TODO")
         default:
             print("*** ERROR: Hey, you should have gotten here, our segmented control should just have 3 segments")
         }
+        tableView.reloadData()
     }
     
     @IBAction func sortSegmentPressed(_ sender: UISegmentedControl) {
@@ -109,6 +121,10 @@ extension SpotsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SpotsTableViewCell
         cell.nameLabel.text = spots.spotArray[indexPath.row].name
+        if let currentLocation = currentLocation {
+            cell.currentLocation = currentLocation
+        }
+        cell.configureCell(spot: spots.spotArray[indexPath.row])
         return cell
     }
     
@@ -149,6 +165,41 @@ extension SpotsListViewController: FUIAuthDelegate {
         
         loginViewController.view.addSubview(logoImageView)
         return loginViewController
+    }
+    
+}
+
+extension SpotsListViewController: CLLocationManagerDelegate {
+    
+    func getLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+    }
+    
+    func handleLocationAuthorizationStatus(status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.requestLocation()
+        case .denied:
+            print("I'm sorry - can't show location. User has not authorized it.")
+        case .restricted:
+            print("Access denied. Likely parental controls are restricting location services in this app.")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        handleLocationAuthorizationStatus(status: status)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        currentLocation = locations.last
+        print("CURRENT LOCATION IS \(currentLocation.coordinate.longitude),\(currentLocation.coordinate.latitude)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to get user location.")
     }
     
 }
