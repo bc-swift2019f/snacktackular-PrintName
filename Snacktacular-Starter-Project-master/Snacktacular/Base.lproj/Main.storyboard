@@ -102,6 +102,9 @@
                                     <segment title="Avg. Rating"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="sortSegmentPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sv9-6a-Nfi"/>
+                                </connections>
                             </segmentedControl>
                         </barButtonItem>
                     </toolbarItems>
@@ -118,6 +121,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="sortSegmentedControl" destination="ej4-60-1ws" id="aed-0V-Tyw"/>
                         <outlet property="tableView" destination="KLh-YF-eBN" id="sTP-6M-9U5"/>
                     </connections>
                 </viewController>
