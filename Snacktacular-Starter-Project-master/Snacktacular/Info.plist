@@ -58,5 +58,9 @@
 	<string>Snacktacular needs access to the device location in order to show this on a map.</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Snacktacular needs access to your camera in order to post photos.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Snacktacular needs access to your photo library in order to post library images.</string>
 </dict>
 </plist>
