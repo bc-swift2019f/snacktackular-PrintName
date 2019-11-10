@@ -24,6 +24,7 @@
 		9F8AB3662377847500D7B0A4 /* UIView+addBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB3652377847500D7B0A4 /* UIView+addBorder.swift */; };
 		9F8AB3682377904500D7B0A4 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB3672377904500D7B0A4 /* ReviewViewController.swift */; };
 		9F8AB36A23779B0C00D7B0A4 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB36923779B0C00D7B0A4 /* Review.swift */; };
+		9F8AB3702377A38900D7B0A4 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8AB36F2377A38900D7B0A4 /* Reviews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		9F8AB3652377847500D7B0A4 /* UIView+addBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBorder.swift"; sourceTree = "<group>"; };
 		9F8AB3672377904500D7B0A4 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		9F8AB36923779B0C00D7B0A4 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		9F8AB36F2377A38900D7B0A4 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				3E8390DF206597F600512DEA /* AppDelegate.swift */,
 				9F8AB35F236E082E00D7B0A4 /* Spots.swift */,
 				9F8AB35D236E072800D7B0A4 /* Spot.swift */,
+				9F8AB36F2377A38900D7B0A4 /* Reviews.swift */,
 				9F8AB36923779B0C00D7B0A4 /* Review.swift */,
 				3E8390E1206597F600512DEA /* SpotsListViewController.swift */,
 				3E0F960920659D9000AE450D /* SpotsTableViewCell.swift */,
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8AB3702377A38900D7B0A4 /* Reviews.swift in Sources */,
 				3E8390E2206597F600512DEA /* SpotsListViewController.swift in Sources */,
 				3E0F96102065AC1A00AE450D /* SpotPhotosCollectionViewCell.swift in Sources */,
 				3E0F960C2065A17500AE450D /* SpotDetailViewController.swift in Sources */,

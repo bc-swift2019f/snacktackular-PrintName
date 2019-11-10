@@ -30,6 +30,15 @@ class Review {
         self.documentID = documentID
     }
     
+    convenience init(dictionary: [String: Any]) {
+        let title = dictionary["title"] as! String? ?? ""
+        let text = dictionary["text"] as! String? ?? ""
+        let rating = dictionary["rating"] as! Int? ?? 0
+        let reviewerUserID = dictionary["reviewerUserID"] as! String
+        let date = Date() //dictionary["date"] as! Date? ?? Date()
+        self.init(title: title, text: text, rating: rating, reviewerUserID: reviewerUserID, date: date, documentID: "")
+    }
+    
     convenience init() {
         let currentUserID = Auth.auth().currentUser?.email ?? "Unknown User"
         self.init(title: "", text: "", rating: 0, reviewerUserID: currentUserID, date: Date(), documentID: "")
