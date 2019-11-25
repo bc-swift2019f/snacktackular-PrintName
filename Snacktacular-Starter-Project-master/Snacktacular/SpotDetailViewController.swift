@@ -305,7 +305,12 @@ extension SpotDetailViewController: UINavigationControllerDelegate, UIImagePicke
         photo.image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         photos.photoArray.append(photo)
         dismiss(animated: true) {
-            self.collectionView.reloadData()
+            photo.saveData(spot: self.spot) { (success) in
+                if success {
+                    self.photos.photoArray.append(photo)
+                    self.collectionView.reloadData()
+                }
+            }
         }
     }
     
