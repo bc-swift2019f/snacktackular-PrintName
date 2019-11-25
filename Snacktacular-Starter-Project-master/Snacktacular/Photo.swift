@@ -16,7 +16,8 @@ class Photo {
     var date: Date
     var documentUUID: String // Universal Unique IDentifier
     var dictionary: [String: Any] {
-        return ["description": description, "postedBy": postedBy, "date": date]
+        let timeIntervalDate = date.timeIntervalSince1970
+        return ["description": description, "postedBy": postedBy, "date": time]
     }
     
     init(image: UIImage, description: String, postedBy: String, date: Date, documentUUID: String) {
@@ -30,6 +31,14 @@ class Photo {
     convenience init() {
         let postedBy = Auth.auth().currentUser?.email ?? "Unknown User"
         self.init(image: UIImage(), description: "", postedBy: postedBy, date: Date(), documentUUID: "")
+    }
+    
+    convenience init(dictionary: [String: Any]) {
+        let description = dictionary["description"] as! String? ?? ""
+        let postedBy = dictionary["postedBy"] as! String? ?? ""
+        let timeIntervalDate = dictionary["date"] as! TimeInterval? ?? TimeInterval()
+        let date = Date(timeIntervalSince1970: timeIntervalDate)
+        self.init(image: UIImage(), description: description, postedBy: postedBy, date: date, documentUUID: "")
     }
     
     func saveData(spot: Spot, completed: @escaping (Bool) -> ()) {
